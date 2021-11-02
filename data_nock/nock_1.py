@@ -1,9 +1,9 @@
 # Let's read data 
 import pandas as pd
 # Read customer_master.csv file
-costomer_master = pd.read_csv('./data/customer_master.csv')
+customer_master = pd.read_csv('./data/customer_master.csv')
 # read the first 5 lines of csv
-print(costomer_master.head()) 
+print(customer_master.head()) 
 
 # Read item_master.csv file
 item_master = pd.read_csv('./data/item_master.csv')

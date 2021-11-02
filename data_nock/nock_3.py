@@ -15,7 +15,7 @@ import pandas as pd
 
 # read transaction_1.csv file
 transaction_1 = pd.read_csv('./data/transaction_1.csv')
-# read transaction_2.csv file
+# read transaction_detail_1.csv file
 transaction_detail_1 = pd.read_csv('./data/transaction_detail_1.csv')
 
 join_data = pd.merge(
