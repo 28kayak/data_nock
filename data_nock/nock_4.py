@@ -23,5 +23,8 @@ join_data = pd.merge(join_data, customer_master, on="customer_id", how="left")
 join_data = pd.merge(join_data, item_master, on="item_id", how="left")
 
 df = pd.DataFrame(join_data)
-
+# show all top 5 data
 print(join_data.head())
+
+# show 3 columns with top 5 data 
+print(join_data[["customer_name", "customer_id", "birth"]].head())
