@@ -4,3 +4,7 @@
 ```
 pyenv exec python3 nock_N.py
 ```
+### How to add lib
+```sh
+pyenv exec pip3 install <lib>
+```
