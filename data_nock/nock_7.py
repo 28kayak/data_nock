@@ -1,7 +1,6 @@
 """[各種統計量を把握する]
 """
 import pandas as pd
-from pandas.io import json
 
 # read data from csv files 
 item_master = pd.read_csv("./data/item_master.csv")
@@ -49,3 +48,4 @@ min       0.000000     1.000000    20.000000   50000.000000   50000.000000
 75%    5357.250000     1.000000    65.000000  187500.000000  210000.000000
 max    7143.000000     4.000000    80.000000  210000.000000  420000.000000
 """
+
