@@ -1,6 +1,7 @@
 """[Monthly Data]
 """
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # read data from csv files 
 item_master = pd.read_csv("./data/item_master.csv")
@@ -49,13 +50,31 @@ print(join_data.head())
 grouped = join_data.groupby(["payment_month", "item_name"]).sum()[["price","quantity"]]
 print(grouped)
 
-join_data =pd.pivot_table(
+join_data1 =pd.pivot_table(
     join_data, 
     index="item_name", 
     columns="payment_month", 
     values=["price", "quantity"], 
     aggfunc="sum"
 )
-print(join_data)
+print(join_data1)
+graph_data = pd.pivot_table(
+    join_data,
+    index="payment_month",
+    columns="item_name",
+    values="price",
+    aggfunc="sum" 
+)
 
 #可視化する
+"""[summary]
+in order to visualize, we need to import mathplotlib
+"""
+plt.plot(list(graph_data.index), graph_data['PC-A'], label="PC-A")
+plt.plot(list(graph_data.index), graph_data["PC-B"], label="PC-B")
+plt.plot(list(graph_data.index), graph_data["PC-C"], label="PC-C")
+plt.plot(list(graph_data.index), graph_data["PC-D"], label="PC-D")
+plt.plot(list(graph_data.index), graph_data["PC-E"], label="PC-E")
+plt.legend()
+#plt.show()
+plt.savefig('../generated/1-14.png')
