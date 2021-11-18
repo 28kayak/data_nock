@@ -10,8 +10,7 @@ next to think about is:
 1. what is the common data we can use to join -> transaction_id 
 2. what data we want to add -> payment_date, customer_id
 """
-import pandas as pd
-   
+import pandas as pd   
 
 # read transaction_1.csv file
 transaction_1 = pd.read_csv('./data/transaction_1.csv')

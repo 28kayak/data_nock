@@ -9,7 +9,7 @@ client_data = pd.read_excel('./data/ch2/kokyaku_daicho.xlsx')
 
 print(gross_sale.head())
 print(client_data.head())
-"""[データの揺れを確認する]
+"""[nock_12: データの揺れを確認する]
 日付データ・名前・item_name
 ---
     purchase_date item_name  item_price customer_name
