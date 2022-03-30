@@ -8,3 +8,8 @@ pyenv exec python3 nock_N.py
 ```sh
 pyenv exec pip3 install <lib>
 ```
+
+### Freeze your lib
+```sh
+pyenv exec pip3 freeze > requirements.txt
+```
